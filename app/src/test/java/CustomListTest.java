@@ -2,12 +2,11 @@ import com.example.simpleparadox.listycity.City;
 import com.example.simpleparadox.listycity.CustomList;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CustomListTest {
     private CustomList list;
@@ -24,13 +23,13 @@ public class CustomListTest {
         assertEquals(list.getCount(), listSize+1);
     }
 
-//    @Test
-//    public void hasCityTest(){
-//        City city = new City("Calgary", "AB");
-//        assertFalse(list.hasCity(city));
-//        list.addCity(city);
-//        assertTrue(list.hasCity(city));
-//    }
+    @Test
+    public void hasCityTest(){
+        City city = new City("Calgary", "AB");
+        assertFalse(list.hasCity(city));
+        list.addCity(city);
+        assertTrue(list.hasCity(city));
+    }
 
     @Test
     public void deleteTest(){
