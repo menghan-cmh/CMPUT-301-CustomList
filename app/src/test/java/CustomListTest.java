@@ -7,6 +7,8 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class CustomListTest {
     private CustomList list;
@@ -26,9 +28,9 @@ public class CustomListTest {
     @Test
     public void hasCityTest(){
         City city = new City("Vancouver", "BC");
-        assertEquals(false, list.hasCity(city));
+        assertFalse(list.hasCity(city));
         list.addCity(city);
-        assertEquals(true, list.hasCity(city));
+        assertTrue(list.hasCity(city));
     }
 
 }
